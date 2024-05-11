@@ -7,11 +7,7 @@ metadata:
 spec:
   eventSeverity: info
   eventSources:
-  - kind: GitRepository
-    name: '*'
-  - kind: Kustomization
-    name: '*'
-  - kind: ImagePolicy
+  - kind: HelmRepository
     name: '*'
   providerRef:
     name: discord
