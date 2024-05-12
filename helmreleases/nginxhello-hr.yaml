@@ -1,0 +1,17 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: nginxhello
+  namespace: default
+spec:
+  chart:
+    spec:
+      chart: nginxhello
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: HelmRepository
+        name: nginxhello
+  interval: 1m0s
+  values:
+    color: red
