@@ -9,5 +9,9 @@ spec:
   eventSources:
   - kind: HelmRepository
     name: '*'
+  - kind: HelmRelease
+    name: '*'
+  - kind: HelmChart
+    name: '*'
   providerRef:
     name: discord
