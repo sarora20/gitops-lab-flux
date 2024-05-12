@@ -1,13 +1,12 @@
 ---
-apiVersion: source.toolkit.fluxcd.io/v1
-kind: GitRepository
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
 metadata:
   name: nginxhello
   namespace: default
 spec:
   interval: 1m0s
-  ref:
-    branch: main
   secretRef:
-    name: gitops-lab-deploy-auth
-  url: ssh://github.com/SumirArora/gitops-lab-deploy
+    name: ghcr-charts-auth
+  type: oci
+  url: oci://ghcr.io/sarora20/charts
